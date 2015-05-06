@@ -177,6 +177,12 @@
 			<version>${spring.security.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
 
 		<!-- <dependency> <groupId>com.sun.jersey.contribs</groupId> <artifactId>jersey-spring</artifactId> 
 			<version>${jersey.version}</version> jersey-spring uses spring 2.5, we want 
