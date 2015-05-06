@@ -20,7 +20,8 @@ public class HelloRestService {
     @Path("text")
     @Produces(MediaType.APPLICATION_JSON)
     public Response sayTextHello(@QueryParam("msg") String msg) {
-//    	System.out.println();
+//    	System.out.println();  
+//    	nklmklmk
         return Response.ok("abc").build();
     }
 
