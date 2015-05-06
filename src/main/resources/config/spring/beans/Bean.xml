@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dbDao" class="com.eclinic.db.dao.DBDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="usersQuery" class="com.eclinic.db.query.UsersQuery">
+		<property name="usersDao" ref="dbDao" />
+		<property name="passwordEncoder" ref="passwordEncoder"></property>
+	</bean>
+
+	<bean id="userDao" class="com.eclinic.db.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="userResources" class="com.eclinic.rest.resources.UserResources">
+		<property name="usersQuery" ref="usersQuery"></property>
+	</bean>
+</beans>
